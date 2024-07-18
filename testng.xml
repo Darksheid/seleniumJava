@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="testSuit">
+	<test name="Navigate Google Page">
+		<classes>
+			<class name="runner.cucumberRunner" /> <!-- Provide the class name to be runned during Test execution -->
+		</classes>
+	</test> <!-- Test -->
+</suite> <!-- Suite -->

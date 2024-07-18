@@ -1,0 +1,518 @@
+!SESSION 2024-06-11 20:38:49.407 -----------------------------------------------
+eclipse.buildId=4.7.0.I20170612-0950
+java.version=1.8.0_202
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.jee.product -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product -data F:\Projects\revision -product org.eclipse.epp.package.jee.product
+
+!ENTRY com.python.pydev.analysis 4 0 2024-06-11 20:38:51.376
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: com.python.pydev.analysis [1043]
+  Unresolved requirement: Require-Bundle: org.python.pydev.ast; bundle-version="[10.1.3,10.1.4)"
+    -> Bundle-SymbolicName: org.python.pydev.ast; bundle-version="10.1.3.202301231743"; singleton:="true"
+       org.python.pydev.ast [1047]
+         Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=11))"
+         Unresolved requirement: Require-Bundle: org.python.pydev.parser; bundle-version="[10.1.3,10.1.4)"
+           -> Bundle-SymbolicName: org.python.pydev.parser; bundle-version="10.1.3.202301231743"; singleton:="true"
+              org.python.pydev.parser [1054]
+                Unresolved requirement: Require-Bundle: org.python.pydev.core; bundle-version="[10.1.3,10.1.4)"
+                  -> Bundle-SymbolicName: org.python.pydev.core; bundle-version="10.1.3.202301231743"; singleton:="true"
+                     org.python.pydev.core [1048]
+                       Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=11))"
+                       Unresolved requirement: Require-Bundle: org.python.pydev.shared_core; bundle-version="[10.1.3,10.1.4)"; visibility:="reexport"
+                         -> Bundle-SymbolicName: org.python.pydev.shared_core; bundle-version="10.1.3.202301231743"; singleton:="true"
+                            org.python.pydev.shared_core [1056]
+                              Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=11))"
+         Unresolved requirement: Require-Bundle: org.python.pydev.core; bundle-version="[10.1.3,10.1.4)"
+           -> Bundle-SymbolicName: org.python.pydev.core; bundle-version="10.1.3.202301231743"; singleton:="true"
+  Unresolved requirement: Require-Bundle: org.python.pydev.core; bundle-version="[10.1.3,10.1.4)"
+    -> Bundle-SymbolicName: org.python.pydev.core; bundle-version="10.1.3.202301231743"; singleton:="true"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:444)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1628)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1607)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1579)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1522)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY com.python.pydev.debug 4 0 2024-06-11 20:38:51.378
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: com.python.pydev.debug [1044]
+  Unresolved requirement: Require-Bundle: org.python.pydev.core; bundle-version="[10.1.3,10.1.4)"
+    -> Bundle-SymbolicName: org.python.pydev.core; bundle-version="10.1.3.202301231743"; singleton:="true"
+       org.python.pydev.core [1048]
+         Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=11))"
+         Unresolved requirement: Require-Bundle: org.python.pydev.shared_core; bundle-version="[10.1.3,10.1.4)"; visibility:="reexport"
+           -> Bundle-SymbolicName: org.python.pydev.shared_core; bundle-version="10.1.3.202301231743"; singleton:="true"
+              org.python.pydev.shared_core [1056]
+                Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=11))"
+  Unresolved requirement: Require-Bundle: org.python.pydev.ast; bundle-version="[10.1.3,10.1.4)"
+    -> Bundle-SymbolicName: org.python.pydev.ast; bundle-version="10.1.3.202301231743"; singleton:="true"
+       org.python.pydev.ast [1047]
+         Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=11))"
+         Unresolved requirement: Require-Bundle: org.python.pydev.parser; bundle-version="[10.1.3,10.1.4)"
+           -> Bundle-SymbolicName: org.python.pydev.parser; bundle-version="10.1.3.202301231743"; singleton:="true"
+              org.python.pydev.parser [1054]
+                Unresolved requirement: Require-Bundle: org.python.pydev.core; bundle-version="[10.1.3,10.1.4)"
+                  -> Bundle-SymbolicName: org.python.pydev.core; bundle-version="10.1.3.202301231743"; singleton:="true"
+         Unresolved requirement: Require-Bundle: org.python.pydev.core; bundle-version="[10.1.3,10.1.4)"
+           -> Bundle-SymbolicName: org.python.pydev.core; bundle-version="10.1.3.202301231743"; singleton:="true"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:444)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1628)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1607)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1579)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1522)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY com.python.pydev.refactoring 4 0 2024-06-11 20:38:51.379
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: com.python.pydev.refactoring [1045]
+  Unresolved requirement: Require-Bundle: org.python.pydev.ast; bundle-version="[10.1.3,10.1.4)"
+    -> Bundle-SymbolicName: org.python.pydev.ast; bundle-version="10.1.3.202301231743"; singleton:="true"
+       org.python.pydev.ast [1047]
+         Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=11))"
+         Unresolved requirement: Require-Bundle: org.python.pydev.parser; bundle-version="[10.1.3,10.1.4)"
+           -> Bundle-SymbolicName: org.python.pydev.parser; bundle-version="10.1.3.202301231743"; singleton:="true"
+              org.python.pydev.parser [1054]
+                Unresolved requirement: Require-Bundle: org.python.pydev.core; bundle-version="[10.1.3,10.1.4)"
+                  -> Bundle-SymbolicName: org.python.pydev.core; bundle-version="10.1.3.202301231743"; singleton:="true"
+                     org.python.pydev.core [1048]
+                       Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=11))"
+                       Unresolved requirement: Require-Bundle: org.python.pydev.shared_core; bundle-version="[10.1.3,10.1.4)"; visibility:="reexport"
+                         -> Bundle-SymbolicName: org.python.pydev.shared_core; bundle-version="10.1.3.202301231743"; singleton:="true"
+                            org.python.pydev.shared_core [1056]
+                              Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=11))"
+         Unresolved requirement: Require-Bundle: org.python.pydev.core; bundle-version="[10.1.3,10.1.4)"
+           -> Bundle-SymbolicName: org.python.pydev.core; bundle-version="10.1.3.202301231743"; singleton:="true"
+  Unresolved requirement: Require-Bundle: org.python.pydev.shared_ui; bundle-version="[10.1.3,10.1.4)"
+    -> Bundle-SymbolicName: org.python.pydev.shared_ui; bundle-version="10.1.3.202301231743"; singleton:="true"
+       org.python.pydev.shared_ui [1058]
+         Unresolved requirement: Require-Bundle: org.python.pydev.shared_core; bundle-version="[10.1.3,10.1.4)"
+           -> Bundle-SymbolicName: org.python.pydev.shared_core; bundle-version="10.1.3.202301231743"; singleton:="true"
+  Unresolved requirement: Require-Bundle: org.python.pydev; bundle-version="[10.1.3,10.1.4)"
+    -> Bundle-SymbolicName: org.python.pydev; bundle-version="10.1.3.202301231743"; singleton:="true"
+       org.python.pydev [1046]
+         Unresolved requirement: Require-Bundle: org.python.pydev.ast; bundle-version="[10.1.3,10.1.4)"
+           -> Bundle-SymbolicName: org.python.pydev.ast; bundle-version="10.1.3.202301231743"; singleton:="true"
+  Unresolved requirement: Require-Bundle: org.python.pydev.core; bundle-version="[10.1.3,10.1.4)"
+    -> Bundle-SymbolicName: org.python.pydev.core; bundle-version="10.1.3.202301231743"; singleton:="true"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:444)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1628)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1607)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1579)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1522)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY org.python.pydev 4 0 2024-06-11 20:38:51.381
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.python.pydev [1046]
+  Unresolved requirement: Require-Bundle: org.python.pydev.parser; bundle-version="[10.1.3,10.1.4)"
+    -> Bundle-SymbolicName: org.python.pydev.parser; bundle-version="10.1.3.202301231743"; singleton:="true"
+       org.python.pydev.parser [1054]
+         Unresolved requirement: Require-Bundle: org.python.pydev.core; bundle-version="[10.1.3,10.1.4)"
+           -> Bundle-SymbolicName: org.python.pydev.core; bundle-version="10.1.3.202301231743"; singleton:="true"
+              org.python.pydev.core [1048]
+                Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=11))"
+                Unresolved requirement: Require-Bundle: org.python.pydev.shared_core; bundle-version="[10.1.3,10.1.4)"; visibility:="reexport"
+                  -> Bundle-SymbolicName: org.python.pydev.shared_core; bundle-version="10.1.3.202301231743"; singleton:="true"
+                     org.python.pydev.shared_core [1056]
+                       Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=11))"
+  Unresolved requirement: Require-Bundle: org.python.pydev.ast; bundle-version="[10.1.3,10.1.4)"
+    -> Bundle-SymbolicName: org.python.pydev.ast; bundle-version="10.1.3.202301231743"; singleton:="true"
+       org.python.pydev.ast [1047]
+         Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=11))"
+         Unresolved requirement: Require-Bundle: org.python.pydev.parser; bundle-version="[10.1.3,10.1.4)"
+           -> Bundle-SymbolicName: org.python.pydev.parser; bundle-version="10.1.3.202301231743"; singleton:="true"
+         Unresolved requirement: Require-Bundle: org.python.pydev.core; bundle-version="[10.1.3,10.1.4)"
+           -> Bundle-SymbolicName: org.python.pydev.core; bundle-version="10.1.3.202301231743"; singleton:="true"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:444)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1628)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1607)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1579)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1522)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY org.python.pydev.ast 4 0 2024-06-11 20:38:51.391
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.python.pydev.ast [1047]
+  Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=11))"
+  Unresolved requirement: Require-Bundle: org.python.pydev.parser; bundle-version="[10.1.3,10.1.4)"
+    -> Bundle-SymbolicName: org.python.pydev.parser; bundle-version="10.1.3.202301231743"; singleton:="true"
+       org.python.pydev.parser [1054]
+         Unresolved requirement: Require-Bundle: org.python.pydev.core; bundle-version="[10.1.3,10.1.4)"
+           -> Bundle-SymbolicName: org.python.pydev.core; bundle-version="10.1.3.202301231743"; singleton:="true"
+              org.python.pydev.core [1048]
+                Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=11))"
+                Unresolved requirement: Require-Bundle: org.python.pydev.shared_core; bundle-version="[10.1.3,10.1.4)"; visibility:="reexport"
+                  -> Bundle-SymbolicName: org.python.pydev.shared_core; bundle-version="10.1.3.202301231743"; singleton:="true"
+                     org.python.pydev.shared_core [1056]
+                       Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=11))"
+  Unresolved requirement: Require-Bundle: org.python.pydev.core; bundle-version="[10.1.3,10.1.4)"
+    -> Bundle-SymbolicName: org.python.pydev.core; bundle-version="10.1.3.202301231743"; singleton:="true"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:444)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1628)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1607)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1579)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1522)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY org.python.pydev.core 4 0 2024-06-11 20:38:51.395
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.python.pydev.core [1048]
+  Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=11))"
+  Unresolved requirement: Require-Bundle: org.python.pydev.shared_core; bundle-version="[10.1.3,10.1.4)"; visibility:="reexport"
+    -> Bundle-SymbolicName: org.python.pydev.shared_core; bundle-version="10.1.3.202301231743"; singleton:="true"
+       org.python.pydev.shared_core [1056]
+         Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=11))"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:444)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1628)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1607)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1579)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1522)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY org.python.pydev.customizations 4 0 2024-06-11 20:38:51.411
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.python.pydev.customizations [1049]
+  Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=11))"
+  Unresolved requirement: Require-Bundle: org.python.pydev.debug; bundle-version="[10.1.3,10.1.4)"
+    -> Bundle-SymbolicName: org.python.pydev.debug; bundle-version="10.1.3.202301231743"; singleton:="true"
+       org.python.pydev.debug [1050]
+         Unresolved requirement: Require-Bundle: org.python.pydev.core; bundle-version="[10.1.3,10.1.4)"
+           -> Bundle-SymbolicName: org.python.pydev.core; bundle-version="10.1.3.202301231743"; singleton:="true"
+              org.python.pydev.core [1048]
+                Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=11))"
+                Unresolved requirement: Require-Bundle: org.python.pydev.shared_core; bundle-version="[10.1.3,10.1.4)"; visibility:="reexport"
+                  -> Bundle-SymbolicName: org.python.pydev.shared_core; bundle-version="10.1.3.202301231743"; singleton:="true"
+                     org.python.pydev.shared_core [1056]
+                       Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=11))"
+  Unresolved requirement: Require-Bundle: org.python.pydev.core; bundle-version="[10.1.3,10.1.4)"
+    -> Bundle-SymbolicName: org.python.pydev.core; bundle-version="10.1.3.202301231743"; singleton:="true"
+  Unresolved requirement: Require-Bundle: org.python.pydev; bundle-version="[10.1.3,10.1.4)"
+    -> Bundle-SymbolicName: org.python.pydev; bundle-version="10.1.3.202301231743"; singleton:="true"
+       org.python.pydev [1046]
+         Unresolved requirement: Require-Bundle: org.python.pydev.ast; bundle-version="[10.1.3,10.1.4)"
+           -> Bundle-SymbolicName: org.python.pydev.ast; bundle-version="10.1.3.202301231743"; singleton:="true"
+              org.python.pydev.ast [1047]
+                Unresolved requirement: Require-Bundle: org.python.pydev.core; bundle-version="[10.1.3,10.1.4)"
+                  -> Bundle-SymbolicName: org.python.pydev.core; bundle-version="10.1.3.202301231743"; singleton:="true"
+  Unresolved requirement: Require-Bundle: org.python.pydev.ast; bundle-version="[10.1.3,10.1.4)"
+    -> Bundle-SymbolicName: org.python.pydev.ast; bundle-version="10.1.3.202301231743"; singleton:="true"
+  Unresolved requirement: Require-Bundle: org.python.pydev.shared_ui; bundle-version="[10.1.3,10.1.4)"
+    -> Bundle-SymbolicName: org.python.pydev.shared_ui; bundle-version="10.1.3.202301231743"; singleton:="true"
+       org.python.pydev.shared_ui [1058]
+         Unresolved requirement: Require-Bundle: org.python.pydev.shared_core; bundle-version="[10.1.3,10.1.4)"
+           -> Bundle-SymbolicName: org.python.pydev.shared_core; bundle-version="10.1.3.202301231743"; singleton:="true"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:444)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1628)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1607)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1579)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1522)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY org.python.pydev.debug 4 0 2024-06-11 20:38:51.419
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.python.pydev.debug [1050]
+  Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=11))"
+  Unresolved requirement: Require-Bundle: org.python.pydev.ast; bundle-version="[10.1.3,10.1.4)"
+    -> Bundle-SymbolicName: org.python.pydev.ast; bundle-version="10.1.3.202301231743"; singleton:="true"
+       org.python.pydev.ast [1047]
+         Unresolved requirement: Require-Bundle: org.python.pydev.core; bundle-version="[10.1.3,10.1.4)"
+           -> Bundle-SymbolicName: org.python.pydev.core; bundle-version="10.1.3.202301231743"; singleton:="true"
+              org.python.pydev.core [1048]
+                Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=11))"
+                Unresolved requirement: Require-Bundle: org.python.pydev.shared_core; bundle-version="[10.1.3,10.1.4)"; visibility:="reexport"
+                  -> Bundle-SymbolicName: org.python.pydev.shared_core; bundle-version="10.1.3.202301231743"; singleton:="true"
+                     org.python.pydev.shared_core [1056]
+                       Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=11))"
+  Unresolved requirement: Require-Bundle: org.python.pydev; bundle-version="[10.1.3,10.1.4)"
+    -> Bundle-SymbolicName: org.python.pydev; bundle-version="10.1.3.202301231743"; singleton:="true"
+       org.python.pydev [1046]
+         Unresolved requirement: Require-Bundle: org.python.pydev.ast; bundle-version="[10.1.3,10.1.4)"
+           -> Bundle-SymbolicName: org.python.pydev.ast; bundle-version="10.1.3.202301231743"; singleton:="true"
+  Unresolved requirement: Require-Bundle: org.python.pydev.parser; bundle-version="[10.1.3,10.1.4)"
+    -> Bundle-SymbolicName: org.python.pydev.parser; bundle-version="10.1.3.202301231743"; singleton:="true"
+       org.python.pydev.parser [1054]
+         Unresolved requirement: Require-Bundle: org.python.pydev.core; bundle-version="[10.1.3,10.1.4)"
+           -> Bundle-SymbolicName: org.python.pydev.core; bundle-version="10.1.3.202301231743"; singleton:="true"
+  Unresolved requirement: Require-Bundle: org.python.pydev.jython; bundle-version="[10.1.3,10.1.4)"
+    -> Bundle-SymbolicName: org.python.pydev.jython; bundle-version="10.1.3.202301231743"; singleton:="true"
+       org.python.pydev.jython [1053]
+         Unresolved requirement: Require-Bundle: org.python.pydev.core; bundle-version="[10.1.3,10.1.4)"
+           -> Bundle-SymbolicName: org.python.pydev.core; bundle-version="10.1.3.202301231743"; singleton:="true"
+  Unresolved requirement: Require-Bundle: org.python.pydev.shared_interactive_console; bundle-version="[10.1.3,10.1.4)"
+    -> Bundle-SymbolicName: org.python.pydev.shared_interactive_console; bundle-version="10.1.3.202301231743"; singleton:="true"
+       org.python.pydev.shared_interactive_console [1057]
+         Unresolved requirement: Require-Bundle: org.python.pydev.shared_core; bundle-version="[10.1.3,10.1.4)"
+           -> Bundle-SymbolicName: org.python.pydev.shared_core; bundle-version="10.1.3.202301231743"; singleton:="true"
+  Unresolved requirement: Require-Bundle: org.python.pydev.shared_ui; bundle-version="[10.1.3,10.1.4)"
+    -> Bundle-SymbolicName: org.python.pydev.shared_ui; bundle-version="10.1.3.202301231743"; singleton:="true"
+       org.python.pydev.shared_ui [1058]
+         Unresolved requirement: Require-Bundle: org.python.pydev.shared_core; bundle-version="[10.1.3,10.1.4)"
+           -> Bundle-SymbolicName: org.python.pydev.shared_core; bundle-version="10.1.3.202301231743"; singleton:="true"
+  Unresolved requirement: Require-Bundle: org.python.pydev.core; bundle-version="[10.1.3,10.1.4)"
+    -> Bundle-SymbolicName: org.python.pydev.core; bundle-version="10.1.3.202301231743"; singleton:="true"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:444)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1628)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1607)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1579)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1522)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY org.python.pydev.django 4 0 2024-06-11 20:38:51.429
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.python.pydev.django [1051]
+  Unresolved requirement: Require-Bundle: org.python.pydev.core; bundle-version="[10.1.3,10.1.4)"
+    -> Bundle-SymbolicName: org.python.pydev.core; bundle-version="10.1.3.202301231743"; singleton:="true"
+       org.python.pydev.core [1048]
+         Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=11))"
+         Unresolved requirement: Require-Bundle: org.python.pydev.shared_core; bundle-version="[10.1.3,10.1.4)"; visibility:="reexport"
+           -> Bundle-SymbolicName: org.python.pydev.shared_core; bundle-version="10.1.3.202301231743"; singleton:="true"
+              org.python.pydev.shared_core [1056]
+                Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=11))"
+  Unresolved requirement: Require-Bundle: org.python.pydev; bundle-version="[10.1.3,10.1.4)"
+    -> Bundle-SymbolicName: org.python.pydev; bundle-version="10.1.3.202301231743"; singleton:="true"
+       org.python.pydev [1046]
+         Unresolved requirement: Require-Bundle: org.python.pydev.parser; bundle-version="[10.1.3,10.1.4)"
+           -> Bundle-SymbolicName: org.python.pydev.parser; bundle-version="10.1.3.202301231743"; singleton:="true"
+              org.python.pydev.parser [1054]
+                Unresolved requirement: Require-Bundle: org.python.pydev.core; bundle-version="[10.1.3,10.1.4)"
+                  -> Bundle-SymbolicName: org.python.pydev.core; bundle-version="10.1.3.202301231743"; singleton:="true"
+         Unresolved requirement: Require-Bundle: org.python.pydev.ast; bundle-version="[10.1.3,10.1.4)"
+           -> Bundle-SymbolicName: org.python.pydev.ast; bundle-version="10.1.3.202301231743"; singleton:="true"
+              org.python.pydev.ast [1047]
+                Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=11))"
+                Unresolved requirement: Require-Bundle: org.python.pydev.parser; bundle-version="[10.1.3,10.1.4)"
+                  -> Bundle-SymbolicName: org.python.pydev.parser; bundle-version="10.1.3.202301231743"; singleton:="true"
+                Unresolved requirement: Require-Bundle: org.python.pydev.core; bundle-version="[10.1.3,10.1.4)"
+                  -> Bundle-SymbolicName: org.python.pydev.core; bundle-version="10.1.3.202301231743"; singleton:="true"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:444)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1628)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1607)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1579)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1522)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY org.python.pydev.jython 4 0 2024-06-11 20:38:51.434
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.python.pydev.jython [1053]
+  Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=11))"
+  Unresolved requirement: Require-Bundle: org.python.pydev.core; bundle-version="[10.1.3,10.1.4)"
+    -> Bundle-SymbolicName: org.python.pydev.core; bundle-version="10.1.3.202301231743"; singleton:="true"
+       org.python.pydev.core [1048]
+         Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=11))"
+         Unresolved requirement: Require-Bundle: org.python.pydev.shared_core; bundle-version="[10.1.3,10.1.4)"; visibility:="reexport"
+           -> Bundle-SymbolicName: org.python.pydev.shared_core; bundle-version="10.1.3.202301231743"; singleton:="true"
+              org.python.pydev.shared_core [1056]
+                Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=11))"
+  Unresolved requirement: Require-Bundle: org.python.pydev.shared_ui; bundle-version="[10.1.3,10.1.4)"
+    -> Bundle-SymbolicName: org.python.pydev.shared_ui; bundle-version="10.1.3.202301231743"; singleton:="true"
+       org.python.pydev.shared_ui [1058]
+         Unresolved requirement: Require-Bundle: org.python.pydev.shared_core; bundle-version="[10.1.3,10.1.4)"
+           -> Bundle-SymbolicName: org.python.pydev.shared_core; bundle-version="10.1.3.202301231743"; singleton:="true"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:444)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1628)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1607)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1579)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1522)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY org.python.pydev.parser 4 0 2024-06-11 20:38:51.442
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.python.pydev.parser [1054]
+  Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=11))"
+  Unresolved requirement: Require-Bundle: org.python.pydev.core; bundle-version="[10.1.3,10.1.4)"
+    -> Bundle-SymbolicName: org.python.pydev.core; bundle-version="10.1.3.202301231743"; singleton:="true"
+       org.python.pydev.core [1048]
+         Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=11))"
+         Unresolved requirement: Require-Bundle: org.python.pydev.shared_core; bundle-version="[10.1.3,10.1.4)"; visibility:="reexport"
+           -> Bundle-SymbolicName: org.python.pydev.shared_core; bundle-version="10.1.3.202301231743"; singleton:="true"
+              org.python.pydev.shared_core [1056]
+                Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=11))"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:444)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1628)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1607)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1579)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1522)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY org.python.pydev.refactoring 4 0 2024-06-11 20:38:51.447
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.python.pydev.refactoring [1055]
+  Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=11))"
+  Unresolved requirement: Require-Bundle: org.python.pydev.parser; bundle-version="[10.1.3,10.1.4)"
+    -> Bundle-SymbolicName: org.python.pydev.parser; bundle-version="10.1.3.202301231743"; singleton:="true"
+       org.python.pydev.parser [1054]
+         Unresolved requirement: Require-Bundle: org.python.pydev.core; bundle-version="[10.1.3,10.1.4)"
+           -> Bundle-SymbolicName: org.python.pydev.core; bundle-version="10.1.3.202301231743"; singleton:="true"
+              org.python.pydev.core [1048]
+                Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=11))"
+                Unresolved requirement: Require-Bundle: org.python.pydev.shared_core; bundle-version="[10.1.3,10.1.4)"; visibility:="reexport"
+                  -> Bundle-SymbolicName: org.python.pydev.shared_core; bundle-version="10.1.3.202301231743"; singleton:="true"
+                     org.python.pydev.shared_core [1056]
+                       Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=11))"
+  Unresolved requirement: Require-Bundle: org.python.pydev.core; bundle-version="[10.1.3,10.1.4)"
+    -> Bundle-SymbolicName: org.python.pydev.core; bundle-version="10.1.3.202301231743"; singleton:="true"
+  Unresolved requirement: Require-Bundle: org.python.pydev; bundle-version="[10.1.3,10.1.4)"
+    -> Bundle-SymbolicName: org.python.pydev; bundle-version="10.1.3.202301231743"; singleton:="true"
+       org.python.pydev [1046]
+         Unresolved requirement: Require-Bundle: org.python.pydev.ast; bundle-version="[10.1.3,10.1.4)"
+           -> Bundle-SymbolicName: org.python.pydev.ast; bundle-version="10.1.3.202301231743"; singleton:="true"
+              org.python.pydev.ast [1047]
+                Unresolved requirement: Require-Bundle: org.python.pydev.core; bundle-version="[10.1.3,10.1.4)"
+                  -> Bundle-SymbolicName: org.python.pydev.core; bundle-version="10.1.3.202301231743"; singleton:="true"
+  Unresolved requirement: Require-Bundle: org.python.pydev.ast; bundle-version="[10.1.3,10.1.4)"
+    -> Bundle-SymbolicName: org.python.pydev.ast; bundle-version="10.1.3.202301231743"; singleton:="true"
+  Unresolved requirement: Require-Bundle: org.python.pydev.shared_ui; bundle-version="[10.1.3,10.1.4)"
+    -> Bundle-SymbolicName: org.python.pydev.shared_ui; bundle-version="10.1.3.202301231743"; singleton:="true"
+       org.python.pydev.shared_ui [1058]
+         Unresolved requirement: Require-Bundle: org.python.pydev.shared_core; bundle-version="[10.1.3,10.1.4)"
+           -> Bundle-SymbolicName: org.python.pydev.shared_core; bundle-version="10.1.3.202301231743"; singleton:="true"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:444)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1628)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1607)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1579)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1522)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY org.python.pydev.shared_core 4 0 2024-06-11 20:38:51.450
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.python.pydev.shared_core [1056]
+  Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=11))"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:444)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1628)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1607)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1579)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1522)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY org.python.pydev.shared_interactive_console 4 0 2024-06-11 20:38:51.457
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.python.pydev.shared_interactive_console [1057]
+  Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=11))"
+  Unresolved requirement: Require-Bundle: org.python.pydev.shared_core; bundle-version="[10.1.3,10.1.4)"
+    -> Bundle-SymbolicName: org.python.pydev.shared_core; bundle-version="10.1.3.202301231743"; singleton:="true"
+       org.python.pydev.shared_core [1056]
+         Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=11))"
+  Unresolved requirement: Require-Bundle: org.python.pydev.shared_ui; bundle-version="[10.1.3,10.1.4)"
+    -> Bundle-SymbolicName: org.python.pydev.shared_ui; bundle-version="10.1.3.202301231743"; singleton:="true"
+       org.python.pydev.shared_ui [1058]
+         Unresolved requirement: Require-Bundle: org.python.pydev.shared_core; bundle-version="[10.1.3,10.1.4)"
+           -> Bundle-SymbolicName: org.python.pydev.shared_core; bundle-version="10.1.3.202301231743"; singleton:="true"
+  Unresolved requirement: Require-Bundle: org.python.pydev.core; bundle-version="[10.1.3,10.1.4)"
+    -> Bundle-SymbolicName: org.python.pydev.core; bundle-version="10.1.3.202301231743"; singleton:="true"
+       org.python.pydev.core [1048]
+         Unresolved requirement: Require-Bundle: org.python.pydev.shared_core; bundle-version="[10.1.3,10.1.4)"; visibility:="reexport"
+           -> Bundle-SymbolicName: org.python.pydev.shared_core; bundle-version="10.1.3.202301231743"; singleton:="true"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:444)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1628)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1607)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1579)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1522)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY org.python.pydev.shared_ui 4 0 2024-06-11 20:38:51.460
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.python.pydev.shared_ui [1058]
+  Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=11))"
+  Unresolved requirement: Require-Bundle: org.python.pydev.shared_core; bundle-version="[10.1.3,10.1.4)"
+    -> Bundle-SymbolicName: org.python.pydev.shared_core; bundle-version="10.1.3.202301231743"; singleton:="true"
+       org.python.pydev.shared_core [1056]
+         Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=11))"
+  Unresolved requirement: Require-Bundle: org.python.pydev.core
+    -> Bundle-SymbolicName: org.python.pydev.core; bundle-version="10.1.3.202301231743"; singleton:="true"
+       org.python.pydev.core [1048]
+         Unresolved requirement: Require-Bundle: org.python.pydev.shared_core; bundle-version="[10.1.3,10.1.4)"; visibility:="reexport"
+           -> Bundle-SymbolicName: org.python.pydev.shared_core; bundle-version="10.1.3.202301231743"; singleton:="true"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:444)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1628)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1607)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1579)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1522)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY org.eclipse.egit.ui 2 0 2024-06-11 20:39:07.786
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\tanmo'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.epp.logging.aeri.ide 2 17 2024-06-11 20:39:11.621
+!MESSAGE Server ‘org.eclipse.epp.logging.aeri.ide.server’ failed with exception: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1 path $. ; version: 2.0.5.v20170613-1207
+!STACK 0
+com.google.gson.JsonSyntaxException: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1 path $
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:224)
+	at com.google.gson.Gson.fromJson(Gson.java:887)
+	at com.google.gson.Gson.fromJson(Gson.java:852)
+	at com.google.gson.Gson.fromJson(Gson.java:801)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.json.Json.deserialize(Json.java:91)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.IO.refreshConfiguration(IO.java:66)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.ServerConnection.startUp(ServerConnection.java:124)
+	at com.google.common.util.concurrent.AbstractIdleService$DelegateService$1.run(AbstractIdleService.java:62)
+	at com.google.common.util.concurrent.Callables$4.run(Callables.java:122)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1 path $
+	at com.google.gson.stream.JsonReader.beginObject(JsonReader.java:385)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:213)
+	... 9 more
