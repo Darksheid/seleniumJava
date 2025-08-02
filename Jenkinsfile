@@ -3,8 +3,8 @@ pipeline {
     agent any
 
     tools {
-        maven 'Maven 3.8.5'
-        jdk 'JDK 11'
+        maven 'Maven 3.8.6'
+        jdk 'JDK 21'
     }
 
     environment {
@@ -14,26 +14,26 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                echo '📥 Cloning source code...'
+                echo 'Cloning source code...'
                 checkout scm
             }
         }
 
         stage('Build') {
             steps {
-                echo '🔧 Running mvn clean compile...'
+                echo 'Running mvn clean compile...'
                 sh 'mvn clean compile'
             }
         }
 
         stage('Test') {
             steps {
-                echo '✅ Running unit tests...'
+                echo  'Running unit tests...'
                 sh 'mvn test'
             }
             post {
                 always {
-                    echo '📄 Publishing test results...'
+                    echo 'Publishing test results...'
                     junit '**/target/surefire-reports/*.xml'
                 }
             }
@@ -41,7 +41,7 @@ pipeline {
 
         stage('Package') {
             steps {
-                echo '📦 Packaging application...'
+                echo 'ðŸ“¦ Packaging application...'
                 sh 'mvn package -DskipTests'
             }
         }
@@ -51,17 +51,17 @@ pipeline {
                 branch 'main'
             }
             steps {
-                echo "🚀 Deploying build for ${BUILD_ENV} environment..."
+                echo "ðŸš€ Deploying build for ${BUILD_ENV} environment..."
             }
         }
     }
 
     post {
         success {
-            echo '🎉 Build completed successfully!'
+            echo 'ðŸŽ‰ Build completed successfully!'
         }
         failure {
-            echo '❌ Build failed. Please check logs.'
+            echo 'â�Œ Build failed. Please check logs.'
         }
     }
 }
