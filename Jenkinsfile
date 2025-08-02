@@ -13,39 +13,7 @@ pipeline {
     }
 
     stages {
-        stage('Checkout') {
-            steps {
-                echo 'Cloning source code...'
-                checkout scm
-            }
-        }
 
-        stage('Build') {
-            steps {
-                echo 'Running mvn clean compile...'
-                bat 'mvn clean compile'
-            }
-        }
-
-        stage('Test') {
-            steps {
-                echo  'Running unit tests...'
-                bat 'mvn test'
-            }
-            post {
-                always {
-                    echo 'Publishing test results...'
-                    junit '**/target/surefire-reports/*.xml'
-                }
-            }
-        }
-
-        stage('Package') {
-            steps {
-                echo 'Packaging application...'
-                bat 'mvn package -DskipTests'
-            }
-        }
 		
 		stage('SonarQube Analysis') {
             steps {
@@ -60,16 +28,6 @@ pipeline {
                 waitForQualityGate abortPipeline: true
             }
         }
-
-        stage('Deploy') {
-            when {
-                branch 'main'
-            }
-            steps {
-                echo "Deploying build for ${BUILD_ENV} environment..."
-            }
-        }
-    }
 
     post {
         success {
