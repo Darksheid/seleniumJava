@@ -4,6 +4,12 @@
 	<groupId>mytests</groupId>
 	<artifactId>revision</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+	
+	<properties>
+		<sonar.projectKey>seleniumJava</sonar.projectKey>
+		<sonar.host.url>http://localhost:9000</sonar.host.url>
+	</properties>
+
 	<dependencies>
 		<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
 		<dependency>

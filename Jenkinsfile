@@ -18,7 +18,7 @@ pipeline {
 		stage('SonarQube Analysis') {
             steps {
                 withSonarQubeEnv('MySonarQube') {
-                    sh 'mvn sonar:sonar -Dsonar.login=$SONAR_TOKEN'
+                    bat 'mvn sonar:sonar -Dsonar.login=$SONAR_TOKEN'
                 }
             }
         }
