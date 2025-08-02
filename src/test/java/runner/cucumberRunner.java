@@ -1,23 +1,20 @@
 package runner;
 
-import cucumber.api.CucumberOptions; //present in cucumber core jar
-import cucumber.api.junit.Cucumber; //cucumber junit dependency
-import cucumber.api.testng.AbstractTestNGCucumberTests; //cucumber testng dependency
-import cucumber.api.testng.CucumberFeatureWrapper;
-import cucumber.api.testng.PickleEventWrapper;
-import cucumber.api.testng.TestNGCucumberRunner;
-
-import org.junit.runner.RunWith; //cucumber junit dependency
+import org.junit.runner.RunWith;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
+import cucumber.api.CucumberOptions; //present in cucumber core jar
+import cucumber.api.junit.Cucumber; //cucumber junit dependency
+import cucumber.api.testng.CucumberFeatureWrapper;
+import cucumber.api.testng.PickleEventWrapper;
+import cucumber.api.testng.TestNGCucumberRunner;
+
 @RunWith(Cucumber.class) // @Runwith cucumber unit dependency
-@CucumberOptions(features =  "src/test/java/features/user_story.feature" , 
-					glue = "stepDefinition", 
-					tags = "@testRun",
-					plugin={"html:target/result", "json:target/result/cucumber.json"}  //generate result in target/result folder
+@CucumberOptions(features = "src/test/java/features/user_story.feature", glue = "stepDefinition", tags = "@testRun", plugin = {
+		"html:target/result", "json:target/result/cucumber.json" } // generate result in target/result folder
 )
 
 public class cucumberRunner {

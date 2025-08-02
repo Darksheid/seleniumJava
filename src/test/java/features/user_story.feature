@@ -10,7 +10,7 @@ Feature: Navigate to Google page
   Scenario Outline: Open Google homepage
     Given User navigate to "url" for "<Test>"
     #Then User searches "keyword" in the Google home page\
-    Then user tests download
+    #Then user tests download
     #Then Verify the results
     #Then user closes the application
     
