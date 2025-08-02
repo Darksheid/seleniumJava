@@ -2,8 +2,11 @@ package playground;
 
 import org.openqa.selenium.chrome.ChromeDriver;
 import java.util.List;
+import java.util.Map;
+import java.util.NoSuchElementException;
 import java.util.LinkedList;
 import java.util.ArrayList;
+import java.util.HashMap;
 
 public class test {
 	
@@ -18,23 +21,35 @@ public class test {
 	
 	public static void main(String[] args) {
 		//myTests();
-		int[] arr1 = {1,2,3,4};
-		System.out.print("Array...");
-		for (Integer i : arr1)
-			System.out.print(i);
-		List<Integer> arr2 = new ArrayList<Integer>();
-		for(int i=12;i<=20;i++)
-			arr2.add(i);
-		System.out.print("Arraylist...");
-		for (Integer i : arr2)
-			System.out.print(i+" ");
+		Map map = new HashMap<String,String>();
 		
-		System.out.println("Linkedlist...");
-		List<Integer> arr3 = new LinkedList<Integer>();
-		for(int i=12;i<=20;i++)
-			arr3.add(i);
-		for (Integer i : arr2)
-			System.out.print(i);
+		map.put("1", "TRoy");
+		map.put("2", "STendulkar");
+		map.put("3", "Kisan");
+		
+//		System.out.println(map.values());
+		int n =3;
+		int count=10;
+		int[][] arr = new int[3][3]; 
+		for (int i=0;i<n;i++) {
+			for (int j=0;j<n;j++)
+				arr[i][j] = count++;
+		}
+		int min=100,minCol=0;
+		for (int[] row : arr) {
+			for(int cell : row) {
+				if (cell<min) {
+					min=cell;
+				}
+			}
+		}
+		
+//		if (map.get("str")==null) {
+//			throw new NoSuchElementException("Cannot find the element");
+//		}
+		
+		
+			
 		
 		
 		

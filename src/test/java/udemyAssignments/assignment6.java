@@ -40,6 +40,7 @@ public class assignment6 {
 			System.out.println(input_txt);
 			Select slct = new Select(driver.findElement(By.xpath("//select[@id='dropdown-class-example']")));
 			slct.selectByVisibleText(input_txt);
+			driver.getWindowHandles().iterator();
 			driver.findElement(By.xpath("//input[@id='name']")).sendKeys(input_txt);
 			driver.findElement(By.xpath("//input[@id='alertbtn']")).click();
 			Alert alrt = driver.switchTo().alert();

@@ -1,0 +1,73 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 5,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 1166701,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "print running background steps",
+            "match": {
+              "location": "steps.print_back_run()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 98100,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "check print of background steps",
+            "match": {
+              "location": "steps.check_print_of_background_steps()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 21,
+        "name": "Open Google homepage",
+        "description": "",
+        "id": "navigate-to-google-page;open-google-homepage;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 9430699201,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "user tests download",
+            "match": {
+              "location": "steps.test_download()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@testRun"
+          }
+        ]
+      }
+    ],
+    "name": "Navigate to Google page",
+    "description": "  This feature will help in automating Google Page navigation",
+    "id": "navigate-to-google-page",
+    "keyword": "Feature",
+    "uri": "src/test/java/features/user_story.feature",
+    "tags": []
+  }
+]

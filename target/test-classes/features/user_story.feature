@@ -9,14 +9,13 @@ Feature: Navigate to Google page
 	@testRun
   Scenario Outline: Open Google homepage
     Given User navigate to "url" for "<Test>"
-    Then User searches "keyword" in the Google home page
-    Then Verify the results
-    Then user closes the application
+    #Then User searches "keyword" in the Google home page\
+    Then user tests download
+    #Then Verify the results
+    #Then user closes the application
     
     
 
     Examples: 
       | Test |
       | TC01 |
-      | TC02 |
-      | TC03 |

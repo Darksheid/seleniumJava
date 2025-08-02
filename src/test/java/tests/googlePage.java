@@ -89,5 +89,13 @@ public class googlePage {
 		}
 		return res;
 	}
+	
+	public boolean download(String url) {
+		driver.get(url);
+		WebElement downloadBtn = driver.findElement(By.xpath("(//a[text()='Windows installer (64-bit)'])[1]"));
+		wait.until(ExpectedConditions.visibilityOf(downloadBtn)); 
+		downloadBtn.click();
+		return true;
+	}
 
 }
