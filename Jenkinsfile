@@ -28,6 +28,7 @@ pipeline {
                 waitForQualityGate abortPipeline: true
             }
         }
+    }
 
     post {
         success {
