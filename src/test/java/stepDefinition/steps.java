@@ -33,12 +33,13 @@ public class steps {
 	public void user_navigate_to_url(String get_url_from_excel, String tcName) throws InterruptedException {
 		TestName = tcName;
 		System.out.println("TC name>>>" + tcName);
-		driver = launchBrowser.chromeDriver();
+		driver = utilities.launchBrowser.chromeDriver();
 		gp = new googlePage(driver);
 		excelFunctions = new excelFunctions();
 		String url = excelFunctions.get_cell_value_from_driver_excel(tcName, get_url_from_excel);
 		url = "https://www.python.org/downloads/";
 		Assert.assertTrue(gp.navigateGooglePage(url));
+		driver.quit();
 	}
 
 	@Then("user tests download")
