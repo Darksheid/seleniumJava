@@ -9,6 +9,7 @@ pipeline {
 
     environment {
         BUILD_ENV = 'dev'
+		SONAR_TOKEN = credentials('sonar-token')
     }
 
     stages {
@@ -43,6 +44,20 @@ pipeline {
             steps {
                 echo 'Packaging application...'
                 bat 'mvn package -DskipTests'
+            }
+        }
+		
+		stage('SonarQube Analysis') {
+            steps {
+                withSonarQubeEnv('MySonarQube') {
+                    sh 'mvn sonar:sonar -Dsonar.login=$SONAR_TOKEN'
+                }
+            }
+        }
+
+        stage('Quality Gate') {
+            steps {
+                waitForQualityGate abortPipeline: true
             }
         }
 
