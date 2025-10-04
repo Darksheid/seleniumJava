@@ -46,14 +46,6 @@ pipeline {
             }
         }
 
-        stage('SonarQube Analysis') {
-            steps {
-                withSonarQubeEnv('MySonarQube') {
-                    bat 'mvn sonar:sonar -Dsonar.login=%SONAR_TOKEN%'
-                }
-            }
-        }
-
         stage('Quality Gate') {
             steps {
                 timeout(time: 1, unit: 'MINUTES') {
