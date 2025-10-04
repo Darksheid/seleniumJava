@@ -9,8 +9,6 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
-
 public class launchBrowser {
 
 	public static WebDriver specificDriver(String browser) {
@@ -22,11 +20,9 @@ public class launchBrowser {
 				driver = new ChromeDriver();
 				System.out.println("Chrome Driver is launched succesfully");
 			} else if (browser.equals("edge")) {
-				WebDriverManager.edgedriver().setup();
 				driver = new EdgeDriver();
 				System.out.println("Edge Driver is launched succesfully");
 			} else {
-				WebDriverManager.firefoxdriver().setup();
 				driver = new FirefoxDriver();
 				System.out.println("Firefox Driver is launched succesfully");
 			}
@@ -64,7 +60,7 @@ public class launchBrowser {
 			driver = new ChromeDriver(options);
 
 			System.out.println("Chrome Driver is launched succesfully");
-			driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 			driver.manage().window().maximize();
 		} catch (Exception e) {
 			e.printStackTrace();

@@ -1,0 +1,42 @@
+services:
+
+  postgres:
+    image: postgres:14
+    environment:
+      POSTGRES_DB: healenium
+      POSTGRES_USER: healenium
+      POSTGRES_PASSWORD: healenium
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+  hlm-backend:
+    image: healenium/hlm-backend:3.4.3
+    ports:
+      - "7878:7878"
+    depends_on:
+      - postgres
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/healenium
+      SPRING_DATASOURCE_USERNAME: healenium
+      SPRING_DATASOURCE_PASSWORD: healenium
+
+      # Hibernate and JPA
+      SPRING_JPA_HIBERNATE_DDL_AUTO: none
+      SPRING_JPA_SHOW_SQL: true
+      SPRING_JPA_PROPERTIES_HIBERNATE_DEFAULT_SCHEMA: public
+      SPRING_JPA_PROPERTIES_HIBERNATE_DIALECT: org.hibernate.dialect.PostgreSQLDialect
+      SPRING_JPA_PROPERTIES_HIBERNATE_CONNECTION_INIT_SQL: SET search_path TO public
+      SPRING_JPA_PROPERTIES_HIBERNATE_JDBC_LOB_NON_CONTEXTUAL_CREATION: true
+      SPRING_JPA_PROPERTIES_HIBERNATE_SHOW_SQL: true
+      SPRING_JPA_PROPERTIES_HIBERNATE_FORMAT_SQL: true
+      SPRING_JPA_PROPERTIES_HIBERNATE_USE_SQL_COMMENTS: true
+
+      # Liquibase
+      SPRING_LIQUIBASE_ENABLED: true
+      SPRING_LIQUIBASE_DEFAULT_SCHEMA: public
+      SPRING_LIQUIBASE_CONTEXTS: default
+
+volumes:
+  pgdata:

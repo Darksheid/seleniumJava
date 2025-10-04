@@ -1,23 +1,27 @@
 package stepDefinition;
 
-import java.io.IOException;
-
 import org.junit.Assert; //cucumber junit dependency
 import org.openqa.selenium.WebDriver;
 
-import cucumber.api.java.en.Given; //io.cucumber-java dependency
-import cucumber.api.java.en.Then; //io.cucumber-java dependency
-import tests.googlePage;
-import utilities.DriverManager1;
+import io.cucumber.java.Before;
+import io.cucumber.java.Scenario;
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import tests.LoginPage;
 import utilities.excelFunctions;
-import utilities.launchBrowser;
 
-public class steps {
+public class steps extends BaseClass {
 	private WebDriver driver;
-	private launchBrowser launchBrowser;
-	private googlePage gp;
+	private LoginPage gp;
 	private excelFunctions excelFunctions;
 	private String TestName;
+
+	@Before
+	public void beforeMethod(Scenario scenario) throws Throwable {
+		System.out.println("Execution started>>>>>>");
+		initBeforeMethods(scenario);
+
+	}
 
 	@Given("print running background steps")
 	public void print_back_run() {
@@ -34,32 +38,10 @@ public class steps {
 		TestName = tcName;
 		System.out.println("TC name>>>" + tcName);
 		driver = utilities.launchBrowser.chromeDriver();
-		gp = new googlePage(driver);
+		gp = new LoginPage(driver);
 		excelFunctions = new excelFunctions();
 		String url = excelFunctions.get_cell_value_from_driver_excel(tcName, get_url_from_excel);
-		url = "https://www.python.org/downloads/";
-		Assert.assertTrue(gp.navigateGooglePage(url));
-		driver.quit();
-	}
-
-	@Then("user tests download")
-	public void test_download() throws IOException, InterruptedException {
-		// driver = launchBrowser.chromeDriver();
-		driver = DriverManager1.createWebDriver("chrome");
-		gp = new googlePage(driver);
-		String url = "https://www.python.org/downloads/windows/";
-		Assert.assertTrue(gp.download(url));
-	}
-
-	@Then("User searches {string} in the Google home page")
-	public void user_searches_in_the_Google_home_page(String get_keyword_from_excel) {
-		String keyword = excelFunctions.get_cell_value_from_driver_excel(TestName, get_keyword_from_excel);
-		Assert.assertTrue(gp.searchText(keyword));
-	}
-
-	@Then("Verify the results")
-	public void verify_the_results() {
-		Assert.assertTrue(gp.validateSearch());
+		Assert.assertTrue(gp.navigateUrl(url));
 	}
 
 	@Then("user closes the application")
@@ -69,4 +51,27 @@ public class steps {
 		Assert.assertTrue(true);
 	}
 
+	@Then("validate that login page is displayed")
+	public void validate_login_page() {
+		Assert.assertTrue(gp.validateLoginPage());
+	}
+
+	@Then("user enters {string}")
+	public void user_enters_value(String key) {
+		key = excelFunctions.get_cell_value_from_driver_excel(TestName, key);
+		System.out.println("key >> " + key);
+		Assert.assertTrue(gp.enterValue(key));
+	}
+
+	@Then("clicks on {string} button")
+	public void user_clicks_onlogin_btn(String buttonName) {
+		Assert.assertTrue(gp.clickButton(buttonName));
+
+	}
+
+	@Then("validate that user is navigated to dashbaord screen")
+	public void validate_dashborad_login() {
+		Assert.assertTrue(gp.validateDashboardLogin());
+
+	}
 }

@@ -1,21 +1,18 @@
 package runner;
 
-import org.junit.runner.RunWith;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-import cucumber.api.CucumberOptions; //present in cucumber core jar
-import cucumber.api.junit.Cucumber; //cucumber junit dependency
-import cucumber.api.testng.CucumberFeatureWrapper;
-import cucumber.api.testng.PickleEventWrapper;
-import cucumber.api.testng.TestNGCucumberRunner;
+import io.cucumber.testng.CucumberOptions;
+import io.cucumber.testng.FeatureWrapper;
+import io.cucumber.testng.PickleWrapper;
+import io.cucumber.testng.TestNGCucumberRunner;
 
-@RunWith(Cucumber.class) // @Runwith cucumber unit dependency
-@CucumberOptions(features = "src/test/java/features/user_story.feature", glue = "stepDefinition", tags = "@testRun", plugin = {
-		"html:target/result", "json:target/result/cucumber.json" } // generate result in target/result folder
-)
+@CucumberOptions(features = "src/test/java/features/user_story.feature", glue = "stepDefinition", tags = "@test_run", plugin = {
+		"json:target/result/cucumber.json" }, // generate result in target/result folder
+		monochrome = true)
 
 public class cucumberRunner {
 	private TestNGCucumberRunner testNGCucumberRunner;
@@ -26,18 +23,12 @@ public class cucumberRunner {
 	}
 
 	@Test(groups = "cucumber", description = "Runs Cucumber Scenarios", dataProvider = "scenarios")
-	public void runScenario1(PickleEventWrapper pickleWrapper, CucumberFeatureWrapper featureWrapper) throws Throwable {
+	public void runScenario1(PickleWrapper pickleWrapper, FeatureWrapper featureWrapper) throws Throwable {
 		// the 'featureWrapper' parameter solely exists to display the feature file in a
 		// test report
-		testNGCucumberRunner.runScenario(pickleWrapper.getPickleEvent());
+		testNGCucumberRunner.runScenario(pickleWrapper.getPickle());
 	}
 
-	/**
-	 * Returns two dimensional array of PickleEventWrapper scenarios with their
-	 * associated CucumberFeatureWrapper feature.
-	 *
-	 * @return a two dimensional array of scenarios features.
-	 */
 	@DataProvider
 	public Object[][] scenarios() {
 		if (testNGCucumberRunner == null) {

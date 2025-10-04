@@ -1,21 +1,20 @@
 Feature: Navigate to Google page
   This feature will help in automating Google Page navigation
 
-  
-  Background:
-	Given print running background steps
-	Then check print of background steps
-	
-	@testRun
+  Background: 
+    Given print running background steps
+    Then check print of background steps
+
+  @test_run
   Scenario Outline: Open Google homepage
     Given User navigate to "url" for "<Test>"
-    #Then User searches "keyword" in the Google home page\
-    #Then user tests download
-    #Then Verify the results
-    #Then user closes the application
-    
-    
+    Then validate that login page is displayed
+    Then user enters "username"
+    Then user enters "password"
+    Then clicks on "login" button
+    Then validate that user is navigated to dashbaord screen
+    Then user closes the application
 
     Examples: 
       | Test |
-      | TC01 |
+      | TC05 |
