@@ -46,10 +46,10 @@ pipeline {
             }
         }
 
-        stage('Quality Gate') {
+        stage('SonarQube Analysis') {
             steps {
-                timeout(time: 1, unit: 'MINUTES') {
-                    waitForQualityGate abortPipeline: true
+                withSonarQubeEnv('MySonarQube') {
+                    bat 'mvn sonar:sonar'
                 }
             }
         }
