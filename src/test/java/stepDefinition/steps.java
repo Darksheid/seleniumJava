@@ -23,6 +23,18 @@ public class steps extends BaseClass {
 
 	}
 
+	// @After
+	// public void tearDown(Scenario scenario) {
+	// if (scenario.isFailed()) {
+	// System.out.println("Scenario failed: " + scenario.getName());
+	// byte[] screenshot = ((TakesScreenshot)
+	// driver).getScreenshotAs(OutputType.BYTES);
+	// scenario.attach(screenshot, "img/png", "failedScreenshot");
+	// } else {
+	// System.out.println("Scenario passed: " + scenario.getName());
+	// }
+	// }
+
 	@Given("print running background steps")
 	public void print_back_run() {
 		System.out.println("Running background steps");

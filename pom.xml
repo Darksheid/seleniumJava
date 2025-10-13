@@ -6,8 +6,6 @@
 	<version>0.0.1-SNAPSHOT</version>
 
 	<properties>
-		<sonar.projectKey>seleniumJava</sonar.projectKey>
-		<sonar.host.url>http://localhost:9000</sonar.host.url>
 		<maven.build.timestamp.format>yyyyMMdd_HHmmss</maven.build.timestamp.format>
 	</properties>
 
@@ -117,12 +115,6 @@
 						<groupId>javax.json</groupId>
 						<artifactId>javax.json-api</artifactId>
 						<version>1.1.4</version>
-					</dependency>
-					<!-- Duplicate dependency, consider removing one -->
-					<dependency>
-						<groupId>javax.json</groupId>
-						<artifactId>javax.json-api</artifactId>
-						<version>1.0</version>
 					</dependency>
 				</dependencies>
 			</plugin>

@@ -11,8 +11,9 @@ import io.cucumber.testng.PickleWrapper;
 import io.cucumber.testng.TestNGCucumberRunner;
 
 @CucumberOptions(features = "src/test/java/features/user_story.feature", glue = "stepDefinition", tags = "@test_run", plugin = {
-		"json:target/result/cucumber.json" }, // generate result in target/result folder
-		monochrome = true)
+		"json:target/result/cucumber.json" } // generate result in target/result folder
+// ,monochrome = true
+)
 
 public class cucumberRunner {
 	private TestNGCucumberRunner testNGCucumberRunner;
@@ -38,7 +39,7 @@ public class cucumberRunner {
 	}
 
 	@AfterClass(alwaysRun = true)
-	public void tearDownClass() throws Exception {
+	public void tearDownClass() {
 		if (testNGCucumberRunner == null) {
 			return;
 		}

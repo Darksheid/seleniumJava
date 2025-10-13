@@ -1,12 +1,11 @@
-Feature: Navigate to Google page
-  This feature will help in automating Google Page navigation
+Feature: Navigate to Login page
 
   Background: 
     Given print running background steps
     Then check print of background steps
 
   @test_run
-  Scenario Outline: Open Google homepage
+  Scenario Outline: Validate login functionality and navigate to Dashboard
     Given User navigate to "url" for "<Test>"
     Then validate that login page is displayed
     Then user enters "username"

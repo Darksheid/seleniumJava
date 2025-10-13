@@ -33,7 +33,7 @@ pipeline {
                 always {
                     junit '**/target/surefire-reports/*.xml'
 
-                    // ✅ Publish the Cucumber overview-features.html report
+                    //Publish the Cucumber overview-features.html report
                     publishHTML([
                         allowMissing: true,
                         alwaysLinkToLastBuild: true,
